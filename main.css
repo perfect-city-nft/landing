@@ -202,10 +202,6 @@
 /*!********************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[3]!./src/style.scss ***!
   \********************************************************************************************************************************************************************************/
-html, body {
-  overflow-x: hidden;
-}
-
 body {
   overscroll-behavior-y: none;
   color: #FFFFFF;
@@ -220,49 +216,53 @@ body {
 
 .content {
   background: linear-gradient(180deg, rgba(8, 14, 30, 0.6) 0%, rgb(8, 14, 30) 60%, rgb(8, 14, 30) 100%);
-  padding: 30px 50px 50px;
   width: 600px;
   margin: 50px auto 0;
   font-size: 17px;
-  border-radius: 10px 10px 0 0;
 }
 @media only screen and (max-width: 700px) {
   .content {
     margin: 0;
-    width: calc(100% - 40px);
-    min-width: 360px;
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 100%;
   }
 }
-.content > .title {
+.content .container {
+  padding: 30px 50px 50px;
+  border-radius: 10px 10px 0 0;
+}
+@media only screen and (max-width: 700px) {
+  .content .container {
+    padding: 30px 20px 10px;
+    border-radius: 0;
+  }
+}
+.content .container > .title {
   text-align: center;
   font-weight: 600;
   font-size: 32px;
   line-height: 39px;
 }
-.content > .subtitle {
+.content .container > .subtitle {
   text-align: center;
   font-style: normal;
   font-size: 17px;
   line-height: 24px;
 }
-.content > .story {
+.content .container > .story {
   margin-top: 20px;
   font-size: 17px;
 }
-.content > .story p {
+.content .container > .story p {
   padding-top: 10px;
 }
-.content > .story .actions {
+.content .container > .story .actions {
   text-align: center;
   margin-top: 40px;
 }
-.content > .story .button {
+.content .container > .story .button {
   margin-right: 10px;
 }
-.content > .grid {
+.content .container > .grid {
   margin-top: 50px;
   margin-bottom: 50px;
   display: grid;
@@ -272,65 +272,65 @@ body {
   grid-row-gap: 50px;
 }
 @media only screen and (max-width: 700px) {
-  .content > .grid {
+  .content .container > .grid {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
   }
-  .content > .grid > .item {
+  .content .container > .grid > .item {
     padding: 5px;
   }
 }
-.content > .grid > .item {
+.content .container > .grid > .item {
   background-color: rgb(0, 28, 57);
   border-radius: 10px;
   padding: 20px;
 }
-.content > .grid > .item .icon {
+.content .container > .grid > .item .icon {
   width: 100px;
   height: 100px;
   background-size: contain;
   background-repeat: no-repeat;
 }
-.content > .grid > .item .icon.nft-chain {
+.content .container > .grid > .item .icon.nft-chain {
   background-image: url(57df6b6407fcf1bdc719.svg);
 }
-.content > .grid > .item .icon.nft-coin {
+.content .container > .grid > .item .icon.nft-coin {
   background-image: url(14b4f8cf90a67441672f.svg);
 }
-.content > .grid > .item .icon.heart {
+.content .container > .grid > .item .icon.heart {
   background-image: url(d4ce434e15c034f8f153.svg);
 }
-.content > .grid > .item .icon.btc {
+.content .container > .grid > .item .icon.btc {
   background-image: url(c328224c6e8856d91b16.svg);
 }
-.content > .grid > .item > .title {
+.content .container > .grid > .item > .title {
   margin-top: 20px;
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
 }
-.content > .grid > .item > .description {
+.content .container > .grid > .item > .description {
   margin-top: 10px;
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
 }
-.content .section {
+.content .container .section {
   margin-top: 40px;
 }
-.content .section .title {
+.content .container .section .title {
   font-weight: 400;
   font-size: 27px;
   line-height: 33px;
   text-align: center;
 }
-.content .section ol {
+.content .container .section ol {
   padding-inline-start: 20px;
 }
-.content .section.cities .title {
+.content .container .section.cities .title {
   margin-bottom: 30px;
 }
-.content .section.cities .item {
+.content .container .section.cities .item {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px dotted #ccc;
@@ -340,53 +340,53 @@ body {
   grid-row-gap: 0;
   width: 100%;
 }
-.content .section.cities .item:last-of-type {
+.content .container .section.cities .item:last-of-type {
   margin-bottom: 0;
   border-bottom: none;
 }
-.content .section.cities .item .image, .content .section.cities .item .info {
+.content .container .section.cities .item .image, .content .container .section.cities .item .info {
   grid-area: auto;
 }
-.content .section.cities .item .actions {
+.content .container .section.cities .item .actions {
   grid-area: 2/1/3/3;
 }
-.content .section.cities .item .name, .content .section.cities .item .description, .content .section.cities .item .stats {
+.content .container .section.cities .item .name, .content .container .section.cities .item .description, .content .container .section.cities .item .stats {
   margin-bottom: 20px;
 }
-.content .section.cities .item .image {
+.content .container .section.cities .item .image {
   width: 100px;
   height: 100px;
 }
-.content .section.cities .item .stats {
+.content .container .section.cities .item .stats {
   margin-top: 5px;
 }
-.content .section.cities .item .stats > div {
+.content .container .section.cities .item .stats > div {
   margin-bottom: 5px;
 }
-.content .section.cities .item .stats > div > span {
+.content .container .section.cities .item .stats > div > span {
   font-weight: bold;
 }
-.content .section.cities .item .image.babylon > div {
+.content .container .section.cities .item .image.babylon > div {
   background-image: url(0dd05b56761b7afdf03c.jpeg);
 }
-.content .section.cities .item .image > div {
+.content .container .section.cities .item .image > div {
   width: 100px;
   height: 100px;
   background-size: contain;
   background-repeat: no-repeat;
   text-align: center;
 }
-.content .section.cities .item .name {
+.content .container .section.cities .item .name {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
 }
-.content .section.cities .item .description {
+.content .container .section.cities .item .description {
   font-weight: 300;
   font-size: 14px;
   line-height: 17px;
 }
-.content .section.cities .item .link {
+.content .container .section.cities .item .link {
   display: inline-block;
   text-decoration: underline;
   cursor: pointer;
@@ -394,25 +394,25 @@ body {
   text-align: center;
   color: white;
 }
-.content .section.cities .item.coming-soon .actions, .content .section.cities .item.coming-soon .image {
+.content .container .section.cities .item.coming-soon .actions, .content .container .section.cities .item.coming-soon .image {
   font-weight: 300;
   font-size: 15px;
   line-height: 18px;
   color: #848484;
 }
-.content .section .list {
+.content .container .section .list {
   text-align: center;
 }
 @media only screen and (max-width: 700px) {
-  .content .section .list {
+  .content .container .section .list {
     margin-top: 20px;
   }
 }
-.content .section .list > div {
+.content .container .section .list > div {
   display: inline-block;
   position: relative;
 }
-.content .section .list > div .name {
+.content .container .section .list > div .name {
   font-size: 18px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
@@ -423,20 +423,22 @@ body {
   cursor: help;
 }
 @media only screen and (max-width: 700px) {
-  .content .section .list > div .name {
+  .content .container .section .list > div .name {
     margin: 5px;
   }
 }
-.content .section .list > div .name:hover + .description {
+.content .container .section .list > div .name:hover + .description {
   z-index: 1;
   opacity: 1;
+  display: block;
 }
-.content .section .list > div .description {
+.content .container .section .list > div .description {
   font-size: 14px;
   transition: opacity 0.5s;
   width: 200px;
   opacity: 0;
   position: absolute;
+  display: none;
   top: 0;
   left: 0;
   transform: translateY(-90%) translateX(50%);
@@ -446,7 +448,7 @@ body {
   z-index: -1;
   text-align: left;
 }
-.content .button {
+.content .container .button {
   border: 1px solid #FFFFFF;
   border-radius: 10px;
   color: white;
@@ -459,10 +461,10 @@ body {
   transition: background-color 0.3s, border-color 0.3s;
   margin-bottom: 10px;
 }
-.content .button:hover {
+.content .container .button:hover {
   border-color: red;
 }
-.content .button > .icon {
+.content .container .button > .icon {
   display: inline-block;
   background-repeat: no-repeat;
   background-size: 20px;
@@ -471,10 +473,10 @@ body {
   vertical-align: text-bottom;
   margin-right: 3px;
 }
-.content .button.telegram > .icon {
+.content .container .button.telegram > .icon {
   background-image: url(a0e07fb25bb814c35aee.svg);
 }
-.content .button.babylon > .icon {
+.content .container .button.babylon > .icon {
   background-image: url(0dd05b56761b7afdf03c.jpeg);
 }
 
