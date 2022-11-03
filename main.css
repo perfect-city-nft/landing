@@ -312,6 +312,12 @@ body {
   font-size: 20px;
   line-height: 24px;
 }
+@media only screen and (max-width: 700px) {
+  .content .container > .grid > .item > .title {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
 .content .container > .grid > .item > .description {
   margin-top: 10px;
   font-weight: 400;
